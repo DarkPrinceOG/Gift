@@ -1,0 +1,72 @@
+/* Set the background image, font, and base styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url("star.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  overflow-x: hidden;
+}
+
+/* Main content container */
+.container {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5); /* dreamy overlay */
+  border-radius: 20px;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Headings */
+h1, h2 {
+  color: #ffd1dc; /* soft pink */
+}
+
+/* Paragraph text */
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+/* Sparkling final message */
+.sparkle {
+  font-size: 2em;
+  text-align: center;
+  color: #ff85b3;
+  animation: sparkle 1.5s infinite alternate;
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0% { text-shadow: 0 0 5px #fff; }
+  100% { text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4; }
+}
+
+/* Falling pink petals */
+.petal {
+  position: fixed;
+  top: -5%;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: fall linear infinite;
+  z-index: 1;
+}
+
+/* Petal falling animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
